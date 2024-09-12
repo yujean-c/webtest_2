@@ -1,0 +1,63 @@
+package student;
+
+import java.util.Collection;
+import java.util.HashMap;
+
+public class SMSu implements CMSu {
+	private HashMap<String, Integer> student;
+
+	public SMSu() {
+        student = new HashMap<>();
+    }
+
+	@Override
+	public void addStudent(String name, int score) {
+		if (score < 0) {
+            throw new IllegalArgumentException("점수를 다시 확인하시오.");
+        }
+        student.put(name, score);
+    }
+		
+
+	@Override
+	public int getStudentScore(String name) {
+		return student.get(name);
+	}
+
+	@Override
+	public void showStudents() {
+		
+	}
+
+	private double getAvg(HashMap<String, Integer> student) {
+		Collection<Integer> val = student.values();
+		double sum = 0.0;
+		if (val.isEmpty()) {
+            return 0.0;
+        } else {
+        	for (int v : val ) {
+        		sum += v;
+        	}
+        }
+		return sum; 
+	}
+	@Override
+	public void showAvgStu() {
+		
+		
+	}
+
+	@Override
+	public void showStored() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void showTop() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}

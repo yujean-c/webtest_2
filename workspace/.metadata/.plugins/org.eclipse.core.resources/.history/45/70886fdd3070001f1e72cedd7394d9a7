@@ -1,0 +1,6 @@
+package student;
+
+public class Student implements CMSu {
+	private HashMap<String, Integer> studentScores;
+
+}

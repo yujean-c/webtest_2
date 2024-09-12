@@ -1,0 +1,11 @@
+package student;
+
+import java.util.HashMap;
+
+public class SMSu implements CMSu {
+	private HashMap<String, Integer> student;
+
+	public SMSu() {
+        student = new HashMap<>();
+    }
+}
